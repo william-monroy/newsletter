@@ -1,3 +1,4 @@
+
 function extraer_dominio(email) {
     var email = email;
     var email_analizado = /^([^]+)@(\w+).(\w+)$/.exec(email);
@@ -26,7 +27,7 @@ const reducer = (state,action) => {
                     user: action.user,
                 };
             }else{
-                alert('Ingresa con tu correo Institucional');
+                console.log(state);
                 return state;
             }
         default:

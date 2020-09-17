@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core';
+import { Button, createMuiTheme } from '@material-ui/core';
 import React from 'react';
 import './Login.css';
 import { auth, provider } from './firebase';
@@ -6,29 +6,50 @@ import { actionTypes } from "./reducer";
 import { useStateValue} from "./StateProvider"
 
 
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+
+import { ThemeProvider } from "@material-ui/core/styles";
 
 function Login() {
     const [state, dispatch] = useStateValue();
     
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
 
-    
+
+    const darkTheme = createMuiTheme({
+        palette: {
+          type: 'dark',
+        },
+    });
 
     const signIn = () => {
         //Sign In...
         auth
             .signInWithPopup(provider)
             .then(result => {
-                
                 dispatch({
                     type: actionTypes.SET_USER,
                     user: result.user,
                 })
-                                
+                if (state.user==null) {
+                    handleOpen();
+                }
                 console.log(result.user);
         }).catch(error => alert(error.message));
     }
 
     return (
+        <ThemeProvider theme={darkTheme}>
         <div className="login">
             <div className="login__logo">
                 <img 
@@ -40,7 +61,28 @@ function Login() {
             </div>
             <Button type="submit" onClick={signIn}>Sign In
             </Button>
+
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                
+            >
+                <DialogTitle id="alert-dialog-title">{"SAITC"}</DialogTitle>
+                <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                    Para poder ingresar tienes que usar tu correo Institucional.
+                </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                <Button onClick={handleClose} color="info" autoFocus>
+                    Entendido!
+                </Button>
+                </DialogActions>
+            </Dialog>
         </div>
+        </ThemeProvider>
     )
 }
 
