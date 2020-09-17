@@ -1,0 +1,14 @@
+.storyReel {
+    display: flex;
+}
+
+.carousel {
+    display: block;
+    width: 700px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+* img{
+    margin: auto;
+}
