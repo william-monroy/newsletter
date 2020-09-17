@@ -12,11 +12,18 @@ import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from './StateProvider';
+import ApartmentIcon from '@material-ui/icons/Apartment';
 
 function Header() {
 
     const [{user},dispatch]=useStateValue();
     
+    const red_tec = () => {
+        var a = document.createElement('a');
+        a.target='_blank';
+        a.href='http://alumnostec.itesm.mx/';
+        a.click();
+    };
 
     return <div className = "header">
             <div className = "header__left" >
@@ -24,7 +31,7 @@ function Header() {
             </div>
             <div className="header__input">
                 <SearchIcon />
-                <input placeholder="Search Facebook" type="text" />
+                <input placeholder="Search SAITC" type="text" />
             </div>
             <div className = "header__center" >
                 <div className="header__option header__option--active">
@@ -45,8 +52,9 @@ function Header() {
             </div>
             <div className = "header__right" >
                 <div className="header__info">
-                    <IconButton>
-                        <AddIcon />
+                    <IconButton onClick={red_tec}>
+                        <h4>MiTec</h4>
+                        <ApartmentIcon />
                     </IconButton>
                     <IconButton>
                         <ForumIcon />

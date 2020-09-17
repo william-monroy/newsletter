@@ -40,12 +40,11 @@
 
 .post__options {
     padding-top: 10px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #3A3B3C;
     display: flex;
     justify-content: space-evenly;
     font-size: medium;
     color: gray;
-    cursor: pointer;
     padding: 15px;
 }
 
@@ -55,6 +54,7 @@
     justify-content: center;
     padding: 5px;
     flex: 1;
+    cursor: pointer;
 }
 
 .post__option > p {

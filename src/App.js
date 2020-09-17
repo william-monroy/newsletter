@@ -6,6 +6,8 @@ import Feed from './Feed';
 import Widgets from './Widgets';
 import Login from './Login';
 import { useStateValue } from './StateProvider'
+import News from './News';
+import WidgetsNews from './WidgetsNews';
 
 function App() {
     
@@ -19,7 +21,6 @@ function App() {
             : (
                 <>
                 <Header />
-
                 <div className="app__body">
                     <Sidebar />
                     <Feed />

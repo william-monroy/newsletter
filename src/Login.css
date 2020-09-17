@@ -1,4 +1,12 @@
+#boton {
+    background-color: #4D35E3;
+    color: #eff2f5;
+}
 
+#boton:hover {
+    background-color: #eff2f5;
+    color: #4D35E3;
+}
 
 .login {
     display: grid;

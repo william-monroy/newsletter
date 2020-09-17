@@ -16,12 +16,8 @@ function Sidebar() {
 
     return <div className="sidebar">
         <SidebarRow src={user.photoURL} title={user.displayName} />
-        <SidebarRow 
-            Icon={HomeIcon}
-            title="Inicio"
-        />
+        <SidebarRow Icon={HomeIcon} title="Inicio" />
         <SidebarRow Icon={WebIcon} title="Noticias" />
-
         <SidebarRow Icon={BusinessCenterIcon} title="Convocatorias de Trabajo" />
         <SidebarRow Icon={ChatIcon} title="Discord" />
         <SidebarRow Icon={SupervisedUserCircleIcon} title="Casas" />

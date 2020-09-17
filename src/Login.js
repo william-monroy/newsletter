@@ -76,8 +76,8 @@ function Login() {
                 </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                <Button onClick={handleClose} color="info" autoFocus>
-                    Entendido!
+                <Button onClick={handleClose} color="info" id="boton" autoFocus>
+                    Entendido
                 </Button>
                 </DialogActions>
             </Dialog>
