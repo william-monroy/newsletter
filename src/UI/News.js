@@ -1,5 +1,5 @@
 import React from 'react';
-import './News.css';
+import '../css/News.css';
 import StoryReel from './StoryReel';
 
 function News() {

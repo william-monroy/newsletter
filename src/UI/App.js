@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import '../css/App.css';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Feed from './Feed';
 import Widgets from './Widgets';
 import Login from './Login';
-import { useStateValue } from './StateProvider'
+import { useStateValue } from '../js/StateProvider'
 import News from './News';
 import WidgetsNews from './WidgetsNews';
 

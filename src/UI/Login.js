@@ -1,9 +1,9 @@
 import { Button, createMuiTheme } from '@material-ui/core';
 import React from 'react';
-import './Login.css';
-import { auth, provider } from './firebase';
-import { actionTypes } from "./reducer";
-import { useStateValue} from "./StateProvider"
+import '../css/Login.css';
+import { auth, provider } from '../js/firebase';
+import { actionTypes } from "../js/reducer";
+import { useStateValue} from "../js/StateProvider"
 
 
 import Dialog from '@material-ui/core/Dialog';

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Header.css";
+import "../css/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
 import WebIcon from "@material-ui/icons/Web";
@@ -11,7 +11,7 @@ import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../js/StateProvider';
 import ApartmentIcon from '@material-ui/icons/Apartment';
 
 function Header() {

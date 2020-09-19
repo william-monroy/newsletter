@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Sidebar.css";
+import "../css/Sidebar.css";
 import SidebarRow from "./SidebarRow";
 import HomeIcon from "@material-ui/icons/Home";
 import WebIcon from "@material-ui/icons/Web";
@@ -8,7 +8,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
 import SchoolIcon from '@material-ui/icons/School';
 import { ExpandMoreOutlined } from "@material-ui/icons";
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../js/StateProvider';
 
 function Sidebar() {
 
